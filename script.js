@@ -1,6 +1,6 @@
 async function getdata(){
  let brand=document.getElementById("brand").value;
-  let res=await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}`);
+  let res=await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}&product_type=${Lipstick}}`);
  let data=await res.json();
   console.log(data);
   getAllData(data);
