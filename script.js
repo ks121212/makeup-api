@@ -2,7 +2,6 @@ async function getdata(){
  let brand=document.getElementById("brand").value;
   let res=await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}}`);
  let data=await res.json();
-  console.log(data);
   getAllData(data);
   }
   function getAllData(datas){
